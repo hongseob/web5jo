@@ -1,0 +1,45 @@
+.clearButton {
+    display: inline;
+    font-size: 12px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: 1px solid lightgray;
+    line-height: 14px;
+    color: darkgray;
+    position: relative;
+    bottom: 12%;
+}
+
+.checkButton {
+    display: inline;
+    font-size: 17px;
+    width: 60px;
+    height: 35px;
+    border: 1px solid lightgray;
+    margin-left: 10px;
+    line-height: 0px;
+}
+
+.chargeButtonBox {
+    padding-top: 13px;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.historyButtonBox {
+	
+}
+
+.chargeButton {
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    padding: 15px 0 15px;
+    font-size: 17px;
+    line-height: 12px;
+    font-weight: 500;
+    background-color: crimson;
+    color: white;
+    border: 0;
+}

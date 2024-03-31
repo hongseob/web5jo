@@ -1,0 +1,170 @@
+.main {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.main .campaign_status {
+	width: 100%;
+	/* margin-top: 100px; */
+	position: relative;
+	top: 50px;
+}
+
+.main .campaign_status .slogan {
+	width: 80%;
+	position: relative;
+	z-index: -1;
+	top: 30px;
+	margin-bottom: 30px;
+	font-size: 0.75vw;
+	font-weight: bold;
+}
+
+.main .campaign_status .slogan_blank {
+	width: 5%;
+	height: 20px;
+	float: left;
+}
+
+.main .c_status_button_box_collection {
+	width: 100%;
+	margin-top: 100px;
+	margin-bottom: 35px;
+	height: 120px;
+	position: relative;
+	z-index: -1;
+	/****** -占쎌뒙占쎈뙔占쎌굲 濚욌꼬�슦�굲占쎈쐻占쎈짗占쎌굲 占쎈쐻占쎈뼩�뜝�뜴�쐻占쎈윪�뜝�럡�돲占쎌굲�뜝�룞�삕占쎈쐻占쎈짗占쎌굲 占쎈쐻占쎈쑌�뜝�럩�닰占쎌굲�뜝�룞�삕�뜝�뜫爰덌옙�굲占쎈쐻�뜝占� 占쎈쎗�뜝�뜴�쐻占쎈짗占쎌굲�뜝�럡��占쎌굲 占쎈쐻占쎈윥�뜝�룞�삕占쎈쐻占쎈쑌�뜝�럥�닰占쎌굲 ***/
+}
+
+.main .c_status_blank {
+	/* background-color: black; */
+	width: 5%;
+	height: inherit;
+	float: left;
+}
+
+.main .c_status_button_box {
+	background-color: white;
+	width: 22.5%;
+	height: 120px;
+	float: left;
+	box-shadow: 3px 3px 0.5rem rgb(0 0 0/ 20%) !important;
+}
+
+.main #endA_button_box {
+	border-top-right-radius: 15px;
+	/* 	border: none; */
+}
+
+.main #endB_button_box {
+	border-top-right-radius: 15px;
+	/* 	border: none; */
+}
+
+/* ------------------------------------------*/
+.c_stauts_circle {
+	/* 	border: 1px solid black; */
+	width: 70px;
+	height: 70px;
+	position: relative;
+	/* 	right:10px; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background-color: #4153FF;
+}
+
+.main .c_status_icon {
+	/* background-color: red; */
+	height: inherit;
+	width: 40%;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.main .c_status_icon_circle {
+	background-color: antiquewhite;
+	width: 60%;
+	height: calc(width);
+}
+
+.main .c_status_detail {
+	width: 60%;
+	height: inherit;
+	font-size: 1vw;
+	float: left;
+}
+
+.main .c_status_text {
+	height: 30px;
+	margin-top: 30px;
+	font-size: 11pt;
+}
+
+.main .c_status_number {
+	height: 50px;
+	display: flex;
+	align-items: center;
+	margin-top: 5px;
+	margin-left: 1px;
+	font-size: 1.5vw;
+	padding-bottom: 35px;
+	font-weight: bolder;
+	font-size: 30pt;
+}
+
+/* 癲ル슪�삕占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲占쎈쐻�뜝占� 占쎈뇲占쎄텭�뜝�룞�삕占쎈쐻占쎈짗占쎌굲 占쎈쎗�뜝�뜴�쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲占쎈쐻�뜝占� 雅�猿볦삕嶺뚮쪋�삕占쎈쐻占쎈짗占쎌굲占쎈쐻占쎈짗占쎌굲 �뜝�룞�삕�뜝�럡猿닷뜝�룞�삕 癲ル슪�삕�뜝�떥�슦�굲占쎈쐻�뜝占�  */
+@media ( max-width :1100px) {
+	.main .c_status_button_box {
+		width: 45%;
+		height: 100px;
+		float: left;
+	}
+	.main .c_status_blank_1100 {
+		width: 5%;
+		height: inherit;
+		float: left;
+	}
+	.main .c_status_number {
+		height: 50px;
+		display: flex;
+		align-items: center;
+		margin-top: 5px;
+		margin-left: 1px;
+		font-size: 3vw;
+		padding-bottom: 35px;
+	}
+	.main #end_button_box {
+		border-top-right-radius: 0px;
+	}
+}
+
+@media ( max-width :600px) {
+	.main .c_status_button_box {
+		width: 90%;
+		height: 100px;
+		float: left;
+	}
+	.main .c_status_blank {
+		/* background-color: black; */
+		width: 0%;
+		height: inherit;
+		float: left;
+	}
+	.main .c_status_number {
+		height: 50px;
+		display: flex;
+		/* justify-content: center; */
+		align-items: center;
+		margin-top: 5px;
+		margin-left: 1px;
+		font-size: 4vw;
+		padding-bottom: 35px;
+	}
+	.main #end_button_box {
+		border-top-right-radius: 0px;
+	}
+}

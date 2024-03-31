@@ -1,0 +1,371 @@
+main {
+	width: 1400px;
+	/* height: calc(100vh - 70px); */
+	height: 1800px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+main .overview_slogan {
+	width: 100%;
+	/* margin-top: 100px; */
+	position: relative;
+	top: 20px;
+}
+
+main .overview_slogan .slogan_title {
+	width: 80%;
+	/* background-color: red; */
+	position: relative;
+	top: 30px;
+	font-size: 1vw;
+	margin-bottom: 30px;
+}
+
+main .overview_list_blank {
+	width: 5%;
+	background-color: yellow;
+	float: left;
+	height: inherit;
+}
+
+main .targetImg .targetImg {
+	width: 90%;
+}
+
+@media ( max-width :1200px) {
+	#img_body {
+		height: 800px;
+	}
+}
+
+@media ( max-width :960px) {
+	#img_body {
+		height: 500px;
+	}
+}
+
+@media ( max-width :720px) {
+	#img_body {
+		height: 300px;
+	}
+}
+
+/* 캠페인 이름 */
+.campaignNameBox {
+	border-bottom: 1px solid lightgray;
+	margin-bottom: 15px;
+}
+
+.campaignName {
+	font-weight: bold;
+	font-size: 24px;
+	margin-bottom: 4px;
+}
+
+.sectorLine {
+	border-bottom: 1px solid lightgray;
+	margin-top: 25px;
+	margin-bottom: 30px;
+}
+
+
+/* 캠페인 박스 제목 */
+.box_name {
+	font-weight: bold;
+	font-size: 18px;
+	margin-bottom: 15px;
+}
+
+/* 오버뷰카드 */
+.overview_card {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.ovCard {
+	border-radius: 0.25rem 30px 0.25rem 0.25rem !important;
+	height: 20px;
+}
+
+.ovCard2 {
+	border-radius: 0.25rem 30px 0.25rem 0.25rem !important;
+}
+
+.ovCard3 {
+	border-radius: 0.25rem 30px 0.25rem 0.25rem !important;
+}
+
+/* 캠페인 오버뷰리스트 카드 헤더 */
+.ovCardhd {
+	display: flex;
+	padding: 1rem;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.ovCard-text {
+	font-size: 25px;
+}
+
+.ovCard-icon {
+	font-size: 30px;
+	font-style: text-primary;
+	float: right;
+}
+
+
+.ovCardView {
+ 	display: inline-flex;
+ 	height: 100%;
+ 	align-items: flex-end;
+}
+
+.ovViewBox {
+	width: 190px;
+}
+
+.ovIconBox {
+	height: 80px;
+}
+
+.ovIcon {
+	float: right;
+ 	display: flex; 
+	flex-direction: culumn !important;
+	position: relative;
+	z-index: 2;
+	justify-content: center;
+	align-items: center;
+	width: 75px;
+	height: 75px;
+	border-radius: 50%;
+	background: #9ba5d2;
+	color: white;
+	float: bottom;
+}
+
+/* 멘토 평점 */
+.reviewButton {
+	border: none;
+	border-radius: 5px;
+	font-size: 15px;
+}
+
+.fa-star {
+    font-size: 15px;
+    cursor: pointer;
+    color: #d7655b;
+    margin: 0;
+}
+
+
+/* 캠페인 인증 */
+#fileBox td {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+/* 캠페인 범위  */
+.range_body {
+	position: relative;
+	padding: 0;
+}
+
+.outrange {
+	position: absolute;
+	/* display: flex; */
+	left: 50%;
+	top: 101%;
+	transform: translate(-50%, -100%);
+	height: 100%;
+	width: 90%;
+	border-radius: 200px 200px 0 0;
+	background-color: lightblue;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+.range {
+	position: absolute;
+	display: flex;
+	left: 50%;
+	top: 100%;
+	transform: translate(-50%, -100%);
+	height: 90px;
+	width: 155px;
+	border-radius: 150px 150px 0 0;
+	background-color: cornflowerblue;
+	justify-content: center;
+	align-items: end;
+}
+
+.range_value {
+	display: flex;
+	height: 20%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 18px;
+}
+
+@media ( max-width :1200px) {
+	.outrange {
+		width: 60%;
+		height: 100%;
+	}
+	.range {
+		width: 30%;
+		height: 53%;
+	}
+	.range_value {
+		height: 20%;
+		font-size: large;
+	}
+}
+
+@media ( max-width :730px) {
+	.outrange {
+		width: 100%;
+		height: 100%;
+	}
+	.range {
+		width: 60%;
+		height: 55%
+	}
+	.range_value {
+		height: 20%;
+		font-size: large;
+	}
+}
+
+.address {
+	width: 150px;
+	text-align: center;
+	color: cornsilk;
+}
+
+/* 링크 이미지 */
+
+.imageAtag {
+	border: 1px solid lightgray !important;
+	width: 100%;
+	height: 90px;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.linkImage {
+	width: 100%;
+/* 	height: 100%; */
+}
+
+.campaign_image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 0.25rem 30px 0.25rem 0.25rem !important;
+}
+
+/* 캠페인 정보글 스크롤 창 */
+.campaign_Info {
+	overflow: auto;
+	height: 100%;
+	width: 100%;
+	position: inherit;
+	border: none;
+	font-size: 20px;
+}
+
+.campaign_Info::-webkit-scrollbar {
+	width: 7px;
+}
+
+.campaign_Info::-webkit-scrollbar-thumb {
+	background-color: cadetblue;
+	border-radius: 10px;
+}
+
+.campaign_Info::-webkit-scrollbar-track {
+	background-color: lightslategray;
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 5px white;
+}
+
+/* 캠페인 켈린더 테이블 */
+
+.calenderTitle {
+	text-align: center;
+	color: #15447d;
+	font-size: 16px;
+	font-weight: 600;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-transform: none;
+}
+
+.campaign_Calender_Body {
+	max-height: 475px;
+	overflow: auto;
+	margin: 0;
+}
+
+.campaign_Calender_Body::-webkit-scrollbar {
+	width: 3px;
+}
+
+.campaign_Calender_Body::-webkit-scrollbar-thumb {
+	background-color: lightgray;
+	border-radius: 5px;
+}
+
+.campaign_Calender_Body::-webkit-scrollbar-track {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 5px white;
+}
+
+.campaign_Calender_Body::-webkit-scrollbar:horizontal {
+	height: 5px;
+}
+
+/* #calenderListBox th {
+	width: 10%;
+} */
+
+#calenderListBox td {
+	border: none;
+}
+
+#calenderListBox td:nth-child(1) {
+	width: 70%;
+	color: #a1a1a1;
+	text-transform: capitalize;
+	font-weight: 600;
+}
+#calenderListBox td:nth-child(2) {
+	width:20%;
+	white-space: nowrap;
+	color: #a1a1a1
+}
+
+#calenderListBox td:nth-child(3) {
+	color: #a1a1a1
+}
+
+
+#map {
+	width: 100%;
+    height: 100%;
+}
+
+.ol-zoom button {
+	display:none;
+}
+.ol-attribution button{
+	display:none;
+}

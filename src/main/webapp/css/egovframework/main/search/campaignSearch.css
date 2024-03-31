@@ -1,0 +1,419 @@
+@charset "UTF-8";
+
+@import url(/fonts/index/notosans/notosanskr.css);
+
+@import url(/fonts/index/silka/roman/stylesheet.css);
+
+.margin_header{
+	width: 100%; 
+	height: 48px;
+}
+
+.search_wrapper{
+	width: 1820px;
+}
+
+.campaign_search_content {
+	 margin-left: 200px !important; 
+	 margin-top: 15px !important; 
+	 float: left !important;
+}
+
+.search_keyword {
+	font-size: 22px;
+	color: #007bff; 
+	font-weight: 800;
+	margin-left: 5px;
+}
+
+.search_description {
+	font-size: 22px;
+	margin-left: 5px;
+}
+
+.reset_description {
+	font-size: 17px; 
+	margin-top: 10px;
+}
+
+.search_box {
+	margin-left: 5px;
+}
+
+
+.filter_reset {
+	margin-left: 4px; 
+	text-decoration: underline;
+}
+
+.filter_delete_box{
+	height: 36px;
+}
+
+.filter_delete{
+	height: 40px; 
+	border: 2px; 
+	border-style: solid;
+	border-radius: 5px; 
+	margin-right: 7px; 
+	padding: 4px;
+	text-decoration: none;
+	background-color: white;
+	border-color: white;
+	box-shadow: 1px 1px 1px grey;
+}
+
+.filter_delete:hover{
+	text-decoration: line-through;
+	border-color: #007bff;
+	transition: 0.4s;
+}
+
+
+.fa_close_color{
+	color: black;
+	margin-left: 5px;
+}
+
+.search_utilities {
+	height: 40px; 
+	width: 800px; 
+	border: 2px solid; 
+	border-color:  rgb(203, 197, 197); 
+	margin-top: 13px; 
+	border-collapse: collapse;
+}
+
+.filter_options1{
+	list-style: none; 
+	margin-top: 8px; 
+	padding-left: 13px; 
+	font-size: 14px; 
+	color: rgb(110, 106, 106);
+}
+
+.filter1 {
+	float: left; 
+	margin-right: 5px; 
+	border-right: 1px solid; 
+	padding-right: 8px; 
+	border-right-color: rgb(203, 197, 197);
+}
+
+.campaign_list_text{
+	width: 1180px; 
+	border-bottom: 1px solid #a2a9b0; 
+	height: 30px; 
+	margin-top: 10px;
+}
+
+.campaign_search_result {
+/*  	height: 1025px; */
+	width: 1170px; 
+	/* border-bottom: 2px solid;  */
+	border-color:  rgb(203, 197, 197); 
+	margin-top: 10px;
+}
+
+.campaign_card_container{
+	height: 470px; 
+	width: 370px; 
+	margin: 5px;
+	margin-bottom: 30px;
+	margin-right: 20px;
+	box-shadow : 3px 3px 3px grey; 
+	border-top-right-radius: 24px;
+}
+
+.card_icon{
+	display: inline-block;
+	margin-left: 17px;
+}
+
+
+.campaign_card_name_box{
+	width: 370px;
+	height: 50px;
+	background-color: white;
+	border-top-right-radius: 24px;
+}
+
+.campaign_card_name{
+	padding-top: 10px; 
+	padding-left: 12px; 
+	font-size: 18px; 
+	font-weight: bold
+}
+
+.campaign_card_ellipsis_btn{
+	float: right; 
+	margin-right: 16px; 
+	padding-top: 23px;
+}
+
+.campaign_card_location_box{
+	height: 260px; 
+	width: 100%;
+}
+
+.campaign_map{
+	height: 260px !important;
+	width: 100%;
+}
+
+.campaign_card_price_box, .campaign_card_date_box, .campaign_card_inter_box{
+	width: 100%;
+	height: 40px;
+	background-color: white; 
+	/* border-bottom: 1px solid; */
+}
+
+.campaign_card_price, .campaign_card_date, .campaign_card_inter{
+	font-size: 17px; 
+	padding-top: 7px; 
+	margin-left: 15px; 
+	width: 340px; 
+	height: 40px; 
+	border-bottom: 1px solid #ced6de;
+}
+
+.campaign_card_price_text{
+	padding-right: 102px; 
+	font-weight: bold;
+}
+
+.campaign_date_price_text{
+	padding-right: 107px; 
+	font-weight: bold;
+}
+
+.campaign_date_inter_text{
+	padding-right: 75px; 
+	font-weight: bold;
+}
+
+.campaign_card_member_box{
+	width: 100%; 
+	height: 40px;
+	background-color: white;
+}
+
+.campaign_card_member{
+	font-size: 17px; 
+	padding-top: 7px; 
+	margin-left: 15px;
+}
+
+.campaign_date_member_text{
+	padding-right: 75px; 
+	font-weight: bold;
+}
+
+.camapgin_table_underline{
+	width: 100%; 
+	height: 10px; 
+	border-bottom: 1px solid;
+}
+
+.search_result_zero{
+	text-align: center; 
+	height: 40px; 
+	width: full;
+}
+
+/* 검색필터 */
+
+.search_filter {
+	float: right;
+	margin-top: 146px; 
+	margin-right: 33px; 
+}
+
+.search_filter_container {
+	width: 255px; 
+	margin-right: 1px; 
+	margin-top: 5px;
+	border-collapse: collapse; 
+	background-color: white;
+	border-bottom-radius: 10px;
+	box-shadow: 3px 3px 3px grey;
+}
+
+.search_result_count_box{
+	text-align:right; 
+	padding-right: 10px; 
+	margin-bottom: 5px;
+}
+
+.search_result_count{
+	color: #007bff;
+	padding-left:30px;
+}
+
+.filter_submit_box {
+	/* border-top: 1px solid;
+	border-bottom: 1px solid; */ 
+	width: 255px; 
+	border-collapse: collapse;
+	height: 40px; 
+	text-align: left;
+	background-color: #2e9cdf;
+	color: white;
+	box-shadow: 3px 3px 3px grey;
+}
+
+.filter_list {
+	border-bottom: 1px solid #ced6de; 
+	width: 230px; 
+	border-collapse: collapse;
+	margin-bottom: 10px;
+	background-color: white;
+	margin-left: 11px;
+}
+
+.filter_list_first {
+	border-bottom: 1px solid #ced6de;
+	width: 230px; 
+	border-collapse: collapse;
+	margin-bottom: 10px;
+	background-color: white;
+	margin-left: 11px;
+	padding-top: 5px;
+}
+
+.filter_list_last{
+	border-color: black;
+	width: 230px; 
+	border-collapse: collapse;
+	padding-bottom: 5px;
+	background-color: white;
+	margin-left: 11px;
+	margin-bottom: 30px;
+}
+	
+.filter_submit_button_box{
+	padding-top: 5px; 
+	padding-left: 26px;
+}
+
+.filter_submit_button{
+	width: 30px; 
+	margin-left: 43px;
+	background-color: white;
+	border: 1px solid white;
+	color: #2e9cdf;
+	margin-top: 1px;
+	cursor: pointer;
+}
+
+.filter_submit_button:hover{
+	background-color: #ced6de;
+	border: 1px solid #ced6de;
+	color: white;
+	transition: background-color .4s;
+	transition: border .4s;
+	transition: color .4s;
+}
+
+
+.filter_options2 {
+	list-style: none; 
+	margin-bottom: 14px; 
+	padding-left: 19px;
+}
+
+.filter2 {
+	font-size: 17px;
+	margin-top: 8px;
+	margin-bottom: 3px; 
+	padding-left: 19px;
+}
+
+.filter2_list{
+	margin-top: 4px;
+}
+
+.filter2_button {
+	width: 50px; 
+	height: 33px; 
+	border-radius: 3px; 
+	margin-left: 69%;
+	margin-top: 5px;
+}
+
+#campaignDistance{
+	width: 93%;
+}
+
+.distance_example{
+	margin-left: 18%;
+}
+
+#distance {
+	margin-left: 7px; 
+	color: #007bff; 
+}
+
+.campaign_price {
+	width: 91px; 
+	height: 33px;
+}
+
+.campaign_date{
+	float: left; 
+	margin-top: 6px; 
+	margin-right: 6px;
+}
+
+#startDate, #endDate{
+	width: 150px;
+}
+
+.campaign_join_method{
+	margin-top: 7px; 
+	margin-right: 10px;
+}
+
+.campaign_join_num {
+	margin-top: 7px; 
+	margin-right: 10px;
+}
+
+.campaign_status{
+	margin-top: 7px; 
+	margin-right: 10px;
+}
+
+.campaign_teacher_sex{
+	margin-top: 7px;
+	margin-right: 4px;
+}
+
+.distanceFilter, .priceFilter, .dateFilter, .interFilter, .memberFilter, .statusFilter{
+	display:none;
+}
+
+.pick{
+	color: #007bff; 
+}
+
+.current_page{
+	background-color: #007bff !important;
+	color: white !important;
+}
+
+#distanceCheckName, #distanceCheck, #priceCheckName, #priceCheck, #dateCheckName, #dateCheck, #interCheckName, #interCheck, #memberCheckName, #memberCheck, #statusCheckName, #statusCheck, .campaign_join_method, .inter, .campaign_join_num, .campaignMember, .campaign_status, .campaignStatus{
+	cursor: pointer;
+}
+
+.goCampaignInfo1:hover, .goCampaignInfo2:hover, .goCampaignInfo3:hover, .goCampaignInfo4:hover, .goCampaignInfo5:hover, .goCampaignInfo6:hover, .goCampaignInfo7:hover, .goCampaignInfo8:hover, .goCampaignInfo9:hover{
+	cursor: pointer;
+}
+
+
+
+
+
+
+
+

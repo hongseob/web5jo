@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+:root {
+   --sub-window-width: 550px;
+}
+
+.sub-window {
+	width: var(--sub-window-width);
+	position: fixed;
+	top: 0;
+	right: -200%;
+	height: 100%;
+	background-color: white;
+	overflow: auto;
+	transition: right .8s;
+	z-index: 1040; 
+}
+
+.sub-window.show {
+	right: 0;
+}
+
+.fixed-window12 {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+  overflow: hidden;
+}
+
+.closebtn {
+  float: right;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: black !important;
+}
+
+.modify_userId{
+	color: #007bff !important;
+}
+
+.fixed-window12 .closebtn {
+  padding: 1rem 1rem;
+  margin: -1rem -1rem -1rem auto;
+}
+
+.member_info_modify_font{
+	color: #007bff;
+    font-size: 35px;
+    font-weight: 700;
+    font-family: "noto sans kr";
+    text-align: left !important;
+}
+
+.info_body {
+	padding-left: 1rem !important; 
+	padding-right: 2rem !important;
+}
+
+.member_info_modify_welcome{
+	font-size: 10pt;
+	color: #555;
+	font-weight: 300;
+	margin-right: 1px;
+}
+
+#member_info_modify form input {
+	padding-left: 0px !important;
+	text-indent: 0px !important;
+}
+
+
+.create-window-part-info-modify{
+	position: relative;
+    top: 17%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 3rem !important; 
+    padding-right: 3rem !important;
+}
+
+.input-underline {
+	border-radius: 0 !important;
+	border-left: 0 !important;
+	border-top: 0 !important;
+	border-right: 0 !important;
+	border-bottom: 1px solid black !important;
+	padding-right:0px !important;
+	font-size:14px !important;
+}
+
+.form-control:focus {
+	color: #495057 !important;
+	background-color: #fff !important;
+	border-color: #000 !important;
+	outline: 0 !important;
+	box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.25) !important;
+}
+
+.address_find_btn_form{
+	position: absolute; 
+	top: 0%; 
+	left: 77%; 
+	width: 23%; 
+	height: 100%;
+}
+
+.address_input_form {
+	position: relative;
+}
+
+.btn-no-radius {
+	border-radius: 0 !important;
+}
+
+.font-11 {
+	font-size: 11pt;
+}
+
+.address_find_btn:hover{
+	background-color:#CCC;
+}
+
+.address_find_btn{
+	border-radius: 0px !important;
+	color: black !important;
+	color:#555 !important;
+	cursor: pointer !important;
+	transition: background-color .2s !important;
+	padding: 0.275rem 0.75rem !important !important;
+	font-size:9pt !important; 
+	border-radius:0px !important;
+	height: 30px !important;
+}
+
+#submit_info_modify_form {
+	margin-bottom: 100px !important;
+	margin-left: 30% !important;
+}
