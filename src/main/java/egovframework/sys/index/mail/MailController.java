@@ -45,8 +45,8 @@ public class MailController {
 		String joinCode = String.valueOf(random);
 		String subject = "회원가입 인증 코드 입니다.";
 		StringBuilder stringBuilder = new StringBuilder();
-		stringBuilder.append("안녕하세요. Proker입니다.\r귀하의 인증 코드는  <" + joinCode + "> 입니다.");
-		String from = "pms32758@gmail.com";
+		stringBuilder.append("안녕하세요. yonsei_notice입니다.\r귀하의 인증 코드는  <" + joinCode + "> 입니다.");
+		String from = "tedd111813@gmail.com";
 		String content = stringBuilder.toString();
 
 		try {

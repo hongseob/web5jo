@@ -26,10 +26,11 @@
 		<security:csrf disabled="false"/>
 		
 		
-        <security:intercept-url pattern="/index.do" access="permitAll" />
-        <security:intercept-url pattern="/member/**" access="permitAll" />
-        <security:intercept-url pattern="/main.do" access="hasAnyRole('ROLE_BASIC','ROLE_ADMIN', 'ROLE_AUTHIRIZED')" /> 
-        <security:intercept-url pattern="/main/**" access="hasAnyRole('ROLE_BASIC','ROLE_ADMIN', 'ROLE_AUTHIRIZED')" />
+        <security:intercept-url pattern="/**" access="permitAll" />
+        <!--<security:intercept-url pattern="/member/**" access="permitAll" />
+        <security:intercept-url pattern="/main.do" access="permitAll" /> 
+        <security:intercept-url pattern="/main/**" access="permitAll" />
+        <security:intercept-url pattern="/main/**" access="hasAnyRole('ROLE_BASIC','ROLE_ADMIN', 'ROLE_AUTHIRIZED')" />-->
         
         
         <security:form-login login-page="/index.do"

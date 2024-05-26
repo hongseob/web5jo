@@ -52,7 +52,7 @@
         </property>
     </bean>
     
-    
+    <!--
     <mvc:interceptors>
          <mvc:interceptor>
                   <mvc:mapping path="/main/**" />
@@ -60,7 +60,7 @@
                   <mvc:exclude-mapping path="/main/**/ajax/**"/>
                   <bean class="egovframework.sys.interceptor.MyInterceptor"/>
          </mvc:interceptor>
-	</mvc:interceptors>
+	</mvc:interceptors>-->
 	
     
     <bean id="localeResolver" class="org.springframework.web.servlet.i18n.SessionLocaleResolver" />

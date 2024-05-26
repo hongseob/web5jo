@@ -25,9 +25,9 @@
     <!-- postgreSQL -->
     <bean id="dataSource_main" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="org.postgresql.Driver"/>
-        <property name="url" value="jdbc:postgresql://118.67.133.195:5432/proker?allowMultiQueries=true" />
+        <property name="url" value="jdbc:postgresql://175.106.99.123:5432/postgres?allowMultiQueries=true" />
         <property name="username" value="postgres"/>
-        <property name="password" value="proker12#$"/>
+        <property name="password" value="yonseiweb12#$"/>
     </bean>
     
     <bean id="dataSource" class="net.sf.log4jdbc.Log4jdbcProxyDataSource">

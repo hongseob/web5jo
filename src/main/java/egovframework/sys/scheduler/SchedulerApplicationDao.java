@@ -27,7 +27,7 @@ public class SchedulerApplicationDao extends EgovAbstractMapper {
 		for (int i = 0; i < params.size(); i++) {
 			// EgovMap
 			params.get(i).put("email", params.get(i).get("uId"));
-			params.get(i).put("title", "Proker 캠페인 알림");
+			params.get(i).put("title", "yonsei_notice 캠페인 알림");
 			params.get(i).put("context", "[" + params.get(i).get("cNm") + "]" + " 회원님의 캠페인이 진행됩니다.");
 			
 			campaignId.add(i, (Integer)params.get(i).get("cId"));
@@ -59,7 +59,7 @@ public class SchedulerApplicationDao extends EgovAbstractMapper {
 		for (int i = 0; i < params.size(); i++) {
 			// EgovMap
 			params.get(i).put("email", params.get(i).get("uId"));
-			params.get(i).put("title", "Proker 캠페인 알림");
+			params.get(i).put("title", "yonsei_notice 캠페인 알림");
 			params.get(i).put("context", "[" + params.get(i).get("cNm") + "]" + " 회원님의 캠페인이 종료됩니다.");
 			
 			campaignId.add(i, (Integer)params.get(i).get("cId"));
