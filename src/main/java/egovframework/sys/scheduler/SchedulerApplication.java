@@ -1,13 +1,14 @@
 package egovframework.sys.scheduler;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintWriter;
+import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.net.HttpURLConnection;
 import java.net.URLEncoder;
+import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -17,9 +18,9 @@ import java.util.UUID;
 import egovframework.rte.fdl.property.EgovPropertyService;
 import egovframework.rte.psl.dataaccess.util.EgovMap;
 import egovframework.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
-import egovframework.sys.admin.AdminService;
+//import egovframework.sys.admin.AdminService;
 import egovframework.sys.cmm.util.PagingVO;
-import egovframework.sys.main.create.CampaignCreateService;
+//import egovframework.sys.main.create.CampaignCreateService;
 import egovframework.sys.sec.handler.SundoUserDetails;
 
 import javax.annotation.Resource;
@@ -55,14 +56,85 @@ public class SchedulerApplication {
 	@Resource(name = "schedulerService")
 	private SchedulerApplicationService schedulerService;
 	
-	@Scheduled(cron = "0 0 0 * * *") //  매일 00시
+	@Scheduled(cron = "0 0/1 * * * ?") //  매일 00시
 //	@Scheduled(fixedRate = 5000)
 	public void demoServiceMethod() {
 		
-		//모집완료 날짜되면 -> 진행
-		schedulerService.updateToProgressCampaign();
-		//진행 enddate 날짜되면 -> 종료
-		schedulerService.updateToEndCampaign();
+		Runtime rt = Runtime.getRuntime();
+        String file= "D:\\eclipse-workspace\\proker\\yonseicrawling.exe";
+        Process pro;
+
+
+        List<List<String>> ret = new ArrayList<>();
+        // 입력 스트림 오브젝트 생성
+        BufferedReader br = null;
+
+        try{
+            pro=rt.exec(file);
+            InputStream inputStream = pro.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
+
+            String line;
+            while ((line = reader.readLine()) != null) {
+                // 실행 결과 처리
+                //System.out.println(line);
+            }
+            pro.waitFor();
+            
+            LocalDate now= LocalDate.now();
+            DateTimeFormatter formatter= DateTimeFormatter.ofPattern("yyyyMMdd");
+
+            String formatedNow=now.format(formatter);
+
+            // 대상 CSV 파일의 경로 설정
+            br = Files.newBufferedReader(Paths.get(formatedNow+".csv"), Charset.forName("UTF-8"));
+            // CSV파일에서 읽어들인 1행분의 데이터
+            String csvline = "";
+
+            while((csvline = br.readLine()) != null) {
+                // CSV 파일의 1행을 저장하는 리스트 변수
+                List<String> tmpList = new ArrayList<>();
+                String[] array = csvline.split(",");
+
+                if(array.length>5){
+                    int alength=array.length;
+                    int overcnt=alength-5;
+                    String[] tmp = new String[5];
+                    tmp[0]=array[0];
+                    tmp[1]=array[1];
+                    tmp[2]=array[2];
+                    for(int i=0; i<overcnt; i++){
+                        tmp[2]=tmp[2]+','+array[3+i];
+                    }
+                    tmp[3]=array[alength-2];
+                    tmp[4]=array[alength-1];
+                    array=tmp;
+                }
+                // 배열에서 리스트로 변환
+                tmpList = Arrays.asList(array);
+                if(tmpList.get(0).equals("category")){
+                    continue;
+                }
+                // 리스트 내용 출력
+//                System.out.println(tmpList);
+                // 반환용 리스트에 1행의 데이터를 저장
+                schedulerService.insertNotice(tmpList);
+                
+                ret.add(tmpList);
+            }
+
+        } catch(Exception e){
+            e.printStackTrace();
+        } finally {
+            try{
+                if(br != null) {
+                    br.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
 	}
 	
 	

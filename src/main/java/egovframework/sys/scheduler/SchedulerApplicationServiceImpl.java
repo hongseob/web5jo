@@ -7,7 +7,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 
 import egovframework.rte.psl.dataaccess.util.EgovMap;
-import egovframework.sys.admin.AdminDAO;
+//import egovframework.sys.admin.AdminDAO;
 
 @Service("schedulerService")
 public class SchedulerApplicationServiceImpl implements SchedulerApplicationService{
@@ -34,6 +34,11 @@ public class SchedulerApplicationServiceImpl implements SchedulerApplicationServ
 	@Override
 	public List<EgovMap> selectSchedulerLog(int pagenum) {
 		return this.scedulerDao.selectSchedulerLog(pagenum);
+	}
+	
+	@Override
+	public int insertNotice(List<String> tmpList) {
+		return this.scedulerDao.insertNotice(tmpList);
 	}
 
 }

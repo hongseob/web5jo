@@ -109,5 +109,8 @@
 				WHERE c_id = ${item} AND status = '4'
 		</foreach>
 	</update>
+	<select id="checkDupNotice" parameterType="java.util.HashMap" resultType="int">select count(*) from notice where category=#{category} and
+ notice_title=#{notice_title}</select>
+	<insert id="insertNotice" parameterType="java.util.HashMap">insert into notice(category,notice_url,notice_title,notice_writer,notice_dt) values(#{category},#{notice_url},#{notice_title},#{notice_writer},#{notice_dt})</insert>
 </mapper>
 
