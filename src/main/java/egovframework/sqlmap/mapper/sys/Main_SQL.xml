@@ -4,19 +4,20 @@
 <mapper namespace="main">
 
 	<select id="getBbsCategory" parameterType="EgovMap" resultType="EgovMap">
-		SELECT category FROM bbs_notice GROUP BY category
+		SELECT category FROM notice GROUP BY category
 	</select>
 	
 	<select id="getBbsNotice" parameterType="EgovMap" resultType="EgovMap">
-		SELECT * FROM bbs_notice where category = #{category}
+		SELECT * FROM notice where category = #{category}
 	</select>
 	
+	<!--
 	<select id="getBbsNoticeInfo" parameterType="EgovMap" resultType="EgovMap">
 		SELECT * FROM bbs_notice no = ${bid}
-	</select>
+	</select>-->
 	
 	<select id="searchBbsNotice" parameterType="EgovMap" resultType="EgovMap">
-		SELECT * FROM bbs_notice where like #{keyword}
+		SELECT * FROM notice where like notice_title = #{keyword}
 	</select>
 
 </mapper>
