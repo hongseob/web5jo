@@ -11,13 +11,21 @@
 		SELECT * FROM notice where category = #{category}
 	</select>
 	
-	<!--
-	<select id="getBbsNoticeInfo" parameterType="EgovMap" resultType="EgovMap">
-		SELECT * FROM bbs_notice no = ${bid}
-	</select>-->
-	
 	<select id="searchBbsNotice" parameterType="EgovMap" resultType="EgovMap">
 		SELECT * FROM notice where like notice_title = #{keyword}
+	</select>
+	
+	<insert id="comuInfoSave" parameterType="EgovMap">
+		INSERT INTO comunity (title, contents, rgdt)
+		VALUES(#{title},#{contents}, now())
+	</insert>
+	
+	<select id="getComuBbsList" parameterType="EgovMap" resultType="EgovMap">
+		SELECT * FROM comunity
+	</select>
+	
+	<select id="searchComuBbs" parameterType="EgovMap" resultType="EgovMap">
+		SELECT * FROM comunity where like title = #{keyword}
 	</select>
 
 </mapper>
