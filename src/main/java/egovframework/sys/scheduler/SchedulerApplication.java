@@ -56,7 +56,7 @@ public class SchedulerApplication {
 	@Resource(name = "schedulerService")
 	private SchedulerApplicationService schedulerService;
 	
-	@Scheduled(cron = "0 0 0 * * ?") //  매일 00시
+	@Scheduled(cron = "0 0/5 * * * ?") //  매일 00시
 //	@Scheduled(fixedRate = 5000)
 	public void demoServiceMethod() {
 		String python= "/usr/local/bin/python3.7";
