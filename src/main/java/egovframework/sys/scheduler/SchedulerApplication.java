@@ -89,6 +89,8 @@ public class SchedulerApplication {
             br = Files.newBufferedReader(Paths.get("/yonsei/"+formatedNow+".csv"), Charset.forName("UTF-8"));
             // CSV파일에서 읽어들인 1행분의 데이터
             String csvline = "";
+            
+            List<String> links= schedulerService.DupNotice();
 
             while((csvline = br.readLine()) != null) {
                 // CSV 파일의 1행을 저장하는 리스트 변수
@@ -117,7 +119,10 @@ public class SchedulerApplication {
                 // 리스트 내용 출력
 //                System.out.println(tmpList);
                 // 반환용 리스트에 1행의 데이터를 저장
-                schedulerService.insertNotice(tmpList);
+                boolean DupResult=links.contains(tmpList.get(1));
+                if(DupResult==false) {
+                	schedulerService.insertNotice(tmpList);
+                }
                 
                 ret.add(tmpList);
             }

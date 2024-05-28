@@ -109,8 +109,9 @@
 				WHERE c_id = ${item} AND status = '4'
 		</foreach>
 	</update>
-	<select id="checkDupNotice" parameterType="hashMap" resultType="int">select count(*) from notice where category=#{category} and
- notice_title=#{notice_title};</select>
+	<select id="DupNotice" resultType="String">
+		select notice_link from notice;
+	</select>
 	<insert id="insertNotice" parameterType="hashMap">
 		insert into notice(category,notice_link,notice_title,notice_writer,notice_dt) values(#{category},#{notice_link},#{notice_title},#{notice_writer},#{notice_dt});
 	</insert>

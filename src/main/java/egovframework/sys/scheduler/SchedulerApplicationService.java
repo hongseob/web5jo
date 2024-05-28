@@ -17,6 +17,8 @@ public interface SchedulerApplicationService {
 	List<EgovMap> selectSchedulerLog(int pagenum);
 	
 	int insertNotice(List<String> tmpList);
+	
+	List<String> DupNotice();
 
 	
 }

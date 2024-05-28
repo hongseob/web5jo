@@ -37,6 +37,11 @@ public class SchedulerApplicationServiceImpl implements SchedulerApplicationServ
 	}
 	
 	@Override
+	public List<String> DupNotice(){
+		return this.scedulerDao.DupNotice();
+	}
+	
+	@Override
 	public int insertNotice(List<String> tmpList) {
 		return this.scedulerDao.insertNotice(tmpList);
 	}

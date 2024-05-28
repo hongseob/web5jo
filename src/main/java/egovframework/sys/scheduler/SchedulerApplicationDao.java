@@ -96,6 +96,10 @@ public class SchedulerApplicationDao extends EgovAbstractMapper {
 		return selectList("scheduler.selectSchedulerLog", map);
 	}
 	
+	public List<String> DupNotice(){
+		return selectList("scheduler.DupNotice");
+	}
+	
 	public int insertNotice(List<String> tmpList) {
 		HashMap<String,String> noticemap = new HashMap<String,String>();
 		
@@ -105,14 +109,7 @@ public class SchedulerApplicationDao extends EgovAbstractMapper {
 		noticemap.put("notice_writer", tmpList.get(3));
 		noticemap.put("notice_dt", tmpList.get(4));
 		
-		int dupResult=selectOne("scheduler.checkDupNotice",noticemap);
-		if(dupResult==0) {
-			insert("scheduler.insertNotice",noticemap);
-			return 1;
-		}
-		else {
-			return 0;
-		}
+		return insert("scheduler.insertNotice",noticemap);
 	}
 
 }
