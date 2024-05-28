@@ -56,13 +56,11 @@ public class SchedulerApplication {
 	@Resource(name = "schedulerService")
 	private SchedulerApplicationService schedulerService;
 	
-	@Scheduled(cron = "0 0/1 * * * ?") //  매일 00시
+	@Scheduled(cron = "0 0 0 * * ?") //  매일 00시
 //	@Scheduled(fixedRate = 5000)
 	public void demoServiceMethod() {
-		
-		Runtime rt = Runtime.getRuntime();
-        String file= "D:\\eclipse-workspace\\proker\\yonseicrawling.exe";
-        Process pro;
+		String python= "/usr/local/bin/python3.7";
+		String yonseicrawling="/yonsei/main.py";
 
 
         List<List<String>> ret = new ArrayList<>();
@@ -70,8 +68,9 @@ public class SchedulerApplication {
         BufferedReader br = null;
 
         try{
-            pro=rt.exec(file);
-            InputStream inputStream = pro.getInputStream();
+        	ProcessBuilder processBuilder = new ProcessBuilder(python, yonseicrawling);
+            Process process = processBuilder.start();
+            InputStream inputStream = process.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
 
             String line;
@@ -79,7 +78,7 @@ public class SchedulerApplication {
                 // 실행 결과 처리
                 //System.out.println(line);
             }
-            pro.waitFor();
+            process.waitFor();
             
             LocalDate now= LocalDate.now();
             DateTimeFormatter formatter= DateTimeFormatter.ofPattern("yyyyMMdd");
@@ -87,7 +86,7 @@ public class SchedulerApplication {
             String formatedNow=now.format(formatter);
 
             // 대상 CSV 파일의 경로 설정
-            br = Files.newBufferedReader(Paths.get(formatedNow+".csv"), Charset.forName("UTF-8"));
+            br = Files.newBufferedReader(Paths.get("/yonsei/"+formatedNow+".csv"), Charset.forName("UTF-8"));
             // CSV파일에서 읽어들인 1행분의 데이터
             String csvline = "";
 

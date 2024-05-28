@@ -100,7 +100,7 @@ public class SchedulerApplicationDao extends EgovAbstractMapper {
 		HashMap<String,String> noticemap = new HashMap<String,String>();
 		
 		noticemap.put("category", tmpList.get(0));
-		noticemap.put("notice_url", tmpList.get(1));
+		noticemap.put("notice_link", tmpList.get(1));
 		noticemap.put("notice_title", tmpList.get(2));
 		noticemap.put("notice_writer", tmpList.get(3));
 		noticemap.put("notice_dt", tmpList.get(4));
