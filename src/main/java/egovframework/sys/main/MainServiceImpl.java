@@ -38,5 +38,20 @@ public class MainServiceImpl implements MainService {
 	public List<EgovMap> searchBbsNotice(EgovMap params) {
 		return this.mainDAO.searchBbsNotice(params);
 	}
+	
+	@Override
+	public void comuInfoSave(EgovMap params) {
+		this.mainDAO.comuInfoSave(params);
+	}
+	
+	@Override
+	public List<EgovMap> getComuBbsList(EgovMap params) {
+		return this.mainDAO.getComuBbsList(params);
+	}
+	
+	@Override
+	public List<EgovMap> searchComuBbs(EgovMap params) {
+		return this.mainDAO.searchComuBbs(params);
+	}
 
 }

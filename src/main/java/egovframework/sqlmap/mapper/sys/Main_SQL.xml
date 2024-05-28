@@ -25,7 +25,7 @@
 	</select>
 	
 	<select id="searchComuBbs" parameterType="EgovMap" resultType="EgovMap">
-		SELECT * FROM comunity where like title = #{keyword}
+		SELECT * FROM comunity where like title = #{title}
 	</select>
 
 </mapper>

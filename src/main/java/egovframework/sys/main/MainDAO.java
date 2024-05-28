@@ -36,4 +36,16 @@ public class MainDAO extends EgovAbstractMapper {
 		return selectList("main.searchBbsNotice", params);
 	}
 	
+	public void comuInfoSave(EgovMap params) {
+		insert("main.comuInfoSave", params);
+	}
+	
+	public List<EgovMap> getComuBbsList(EgovMap params) {
+		return selectList("main.getComuBbsList", params);
+	}
+	
+	public List<EgovMap> searchComuBbs(EgovMap params) {
+		return selectList("main.searchComuBbs", params);
+	}
+	
 }

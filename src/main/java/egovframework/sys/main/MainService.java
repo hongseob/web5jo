@@ -17,4 +17,10 @@ public interface MainService {
     
     List<EgovMap> searchBbsNotice(EgovMap params);
     
+    void comuInfoSave(EgovMap params);
+    
+    List<EgovMap> getComuBbsList(EgovMap params);
+    
+    List<EgovMap> searchComuBbs(EgovMap params);
+    
 }

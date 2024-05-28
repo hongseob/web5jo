@@ -114,6 +114,34 @@ public class MainController {
 		
 		return mv;
 	}
+	
+	@RequestMapping(value = "/main/comuInfoSave.do", method = RequestMethod.GET)
+	public void comuInfoSave(HttpServletRequest req) throws Exception {
+		EgovMap params = this.paramMap(req);
+		this.mainService.comuInfoSave(params);
+	}
+	
+	@RequestMapping(value = "/main/getComuBbsList.do", method = RequestMethod.GET)
+	public ModelAndView getComuBbsList(HttpServletRequest req, ModelAndView mv) throws Exception {
+		mv.setViewName("jsonView");
+		
+		EgovMap params = this.paramMap(req);
+		List<EgovMap> comuBbsList = this.mainService.getComuBbsList(params);
+		mv.addObject("comuBbsList", comuBbsList);
+		
+		return mv;
+	}
+	
+	@RequestMapping(value = "/main/searchComuBbs.do", method = RequestMethod.GET)
+	public ModelAndView searchComuBbs(HttpServletRequest req, ModelAndView mv) throws Exception {
+		mv.setViewName("jsonView");
+		
+		EgovMap params = this.paramMap(req);
+		List<EgovMap> searchComuBbsList = this.mainService.searchComuBbs(params);
+		mv.addObject("searchComuBbsList", searchComuBbsList);
+		
+		return mv;
+	}
 
 	private EgovMap paramMap(HttpServletRequest request) {
 		EgovMap paramMap = new EgovMap();
