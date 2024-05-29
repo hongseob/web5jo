@@ -56,7 +56,7 @@ public class SchedulerApplication {
 	@Resource(name = "schedulerService")
 	private SchedulerApplicationService schedulerService;
 	
-	@Scheduled(cron = "0 0/5 * * * ?") //  매일 00시
+	@Scheduled(cron = "0 0 0 * * *") //  매일 00시
 //	@Scheduled(fixedRate = 5000)
 	public void demoServiceMethod() {
 		String python= "/usr/local/bin/python3.7";
@@ -68,6 +68,7 @@ public class SchedulerApplication {
         BufferedReader br = null;
 
         try{
+        	System.out.println("Crawling Start...");
         	ProcessBuilder processBuilder = new ProcessBuilder(python, yonseicrawling);
             Process process = processBuilder.start();
             InputStream inputStream = process.getInputStream();
@@ -79,7 +80,8 @@ public class SchedulerApplication {
                 //System.out.println(line);
             }
             process.waitFor();
-            
+            System.out.println("Crawling Finish!");
+            System.out.println("Save Data...");
             LocalDate now= LocalDate.now();
             DateTimeFormatter formatter= DateTimeFormatter.ofPattern("yyyyMMdd");
 
@@ -117,7 +119,6 @@ public class SchedulerApplication {
                     continue;
                 }
                 // 리스트 내용 출력
-//                System.out.println(tmpList);
                 // 반환용 리스트에 1행의 데이터를 저장
                 boolean DupResult=links.contains(tmpList.get(1));
                 if(DupResult==false) {
@@ -125,6 +126,7 @@ public class SchedulerApplication {
                 }
                 
                 ret.add(tmpList);
+                System.out.println("Done!");
             }
 
         } catch(Exception e){
